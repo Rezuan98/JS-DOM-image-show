@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+</head>
+<!-- after clicking on any image staying below 
+    "myimage(this.src)" function sending its own url by onclick method.
+    then we catched the mother image url with an id and stored to the changeimg.
+    and we are recieving the onclick url by calling the function myimage(x) with parameter x.
+
+    finally finally we putting onclick url to the changeimg variable ,and it delivering to the changimg id 
+    which belong to mother photo url.
+  -->
+<body>
+    <img src="download.jpg" alt="" id="changimg" border="1" height="300px" width="250px"><br>
+    <img src="down.jpg" alt="" onclick="myimage(this.src)"   border="1" height="100px" width="80px">
+    <img src="down2.jpg" alt="" onclick="myimage(this.src)"  border="1" height="100px" width="80px">
+    <img src="down3.jpg" alt="" onclick="myimage(this.src)"  border="1" height="100px" width="80px">
+    <img src="down4.jpg" alt="" onclick="myimage(this.src)"  border="1" height="100px" width="80px">
+<script>
+    var changeimg= document.getElementById("changimg");
+        function myimage(x){
+            changeimg.src=x;
+        }
+</script>
+</body>
+</html>
